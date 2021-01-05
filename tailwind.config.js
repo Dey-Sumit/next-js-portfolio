@@ -3,9 +3,16 @@ module.exports = {
    darkMode: false, // or 'media' or 'class'
    theme: {
       fontFamily: {
-         body: ['Poppins'],
+         kaushan: ['Kaushan Script'],
       },
-      extend: {},
+      extend: {
+         //TODO add green
+         colors: {
+            green: {
+               DEFAULT: '#00f260',
+            },
+         },
+      },
    },
    variants: {
       extend: {},
