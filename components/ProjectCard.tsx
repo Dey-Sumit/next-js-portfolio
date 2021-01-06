@@ -1,25 +1,32 @@
 import { FunctionComponent } from 'react'
 import { project } from '../types'
+import Image from 'next/image'
+import { AiFillGithub } from 'react-icons/ai'
 // TODO Github
 
 const ProjectCard: FunctionComponent<{ project: project }> = ({
-   project: { name, image, deployed_url, github_url },
+   project: { name, image_path, deployed_url, github_url },
 }) => {
    return (
-      <div className='w-1/3 p-2 my-3 bg-gray-300 rounded-lg'>
-         <figure className=''>
-            <a href={deployed_url} target='_blank' rel='noopener noreferrer'>
-               <img src={image} alt={name} className='' />
-            </a>
+      <div className='col-span-12 p-2 bg-gray-200 rounded-lg  cursor-pointer dark:bg-gray-800 sm:col-span-6 lg:col-span-4'>
+         {/* <a href={deployed_url} target='_blank' rel='noopener noreferrer'> */}
 
-            <div className='my-2 text-center'>
-               <a
-                  href={github_url}
-                  target='_blank'
-                  rel='noopener noreferrer'></a>
-               {name}
-            </div>
-         </figure>
+         <Image
+            src={image_path}
+            alt={name}
+            layout='responsive'
+            width={300}
+            height={150}
+         />
+
+         {/* </a> */}
+
+         <div className='flex items-center justify-center my-2 text-lg'>
+            <a href={github_url} target='_blank' rel='noopener noreferrer'>
+               <AiFillGithub className='w-8 h-8 mr-3' />
+            </a>
+            {name}
+         </div>
       </div>
    )
 }

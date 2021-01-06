@@ -3,3 +3,7 @@
 3. install tailwind (from docs)
    create tailwind config & postcss : npx tailwindcss init -p
 4. set up google font(if needed): \_document & tailwind config
+
+---
+DARK MODE: 
+https://dev.to/enochndika/dark-mode-with-tailwindcss-in-next-js-2if5

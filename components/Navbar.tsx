@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 const Navbar = () => {
-   const { pathname } = useRouter()
+   const { pathname, push } = useRouter()
 
    const [active, setActive] = useState('')
 
@@ -28,34 +29,46 @@ const Navbar = () => {
    }
 
    return (
-      <div className='flex justify-between px-4 py-3 my-3'>
+      <div className='flex justify-between px-5 py-3 my-3'>
          <span className='text-2xl font-bold border-b-4 border-green'>
             {active}
          </span>
 
          <div className='text-xl font-normal'>
             {active !== 'About' && (
-               <span
-                  className='mx-2 cursor-pointer hover:border-b-4 hover:border-green'
-                  onClick={() => setActive('About')}>
-                  About
-               </span>
+               <Link href='/'>
+                  <a>
+                     <span
+                        className='mx-2 cursor-pointer hover:border-b-4 hover:border-green'
+                        onClick={() => setActive('About')}>
+                        About
+                     </span>
+                  </a>
+               </Link>
             )}
             {active !== 'Resume' && (
-               <span
-                  className='mx-2 cursor-pointer hover:border-b-4 hover:border-green'
-                  onClick={() => setActive('Resume')}>
-                  Resume
-               </span>
+               <Link href='/resume'>
+                  <a>
+                     <span
+                        className='mx-2 cursor-pointer hover:border-b-4 hover:border-green'
+                        onClick={() => setActive('Resume')}>
+                        Resume
+                     </span>
+                  </a>
+               </Link>
             )}
 
             {active !== 'Projects' && (
                // TODO fix hover
-               <span
-                  className='mx-2 cursor-pointer hover:text-green hover:border-green'
-                  onClick={() => setActive('Projects')}>
-                  Projects
-               </span>
+               <Link href='/projects'>
+                  <a>
+                     <span
+                        className='mx-2 cursor-pointer hover:text-green hover:border-green'
+                        onClick={() => setActive('Projects')}>
+                        Projects
+                     </span>
+                  </a>
+               </Link>
             )}
          </div>
       </div>

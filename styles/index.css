@@ -8,3 +8,19 @@ body {
    font-family: sans-serif;
    color: #354358;
 }
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-image: linear-gradient(to right bottom, #00f260, #0575e6);
+}
+@layer utilities {
+   .scrollbar-hide {
+      ::-webkit-scrollbar {
+         width: 0 !important;
+      }
+      overflow: -moz-scrollbars-none;
+   }
+}

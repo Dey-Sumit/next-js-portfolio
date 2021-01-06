@@ -20,7 +20,7 @@ const About = () => {
       visible: {
          opacity: 1,
          transition: {
-            dealy: 0.2,
+            delay: 0.2,
             duration: 0.6,
          },
       },
@@ -32,18 +32,17 @@ const About = () => {
       },
    }
    return (
-      <div className=''>
-         <h6 className=''>
+      <div className='px-6 py-2'>
+         <h6 className='my-1 text-base font-medium'>
             I describe myself as someone who's persistent, a quick learner and
             loves problem solving by using simple and scalable solutions.
          </h6>
-         <div className=''>
-            <h6 className=''>What I Offer</h6>
-            <div className=''>
-               {about_data.map(skill => (
-                  <SkillCard skill={skill} />
-               ))}
-            </div>
+
+         <h4 className='my-3 text-xl font-semibold'>What I Offer</h4>
+         <div className='grid gap-4 my-3 md:grid-cols-2'>
+            {about_data.map(skill => (
+               <SkillCard skill={skill} key={skill.title} />
+            ))}
          </div>
       </div>
    )

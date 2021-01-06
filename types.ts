@@ -6,7 +6,7 @@ export interface skill {
 
 export interface project {
    name: string
-   image: any
+   image_path: any
    deployed_url: string
    github_url: string
    category: string[]

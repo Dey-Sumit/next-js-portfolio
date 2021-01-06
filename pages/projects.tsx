@@ -8,11 +8,17 @@ const Projects = () => {
    const [projects, setProjects] = useState(data_projects)
    const [active, setActive] = useState('All')
 
-   // const handleFilterCategory = (name) => {
-   //     const new_array = data_projects.filter(project => project.category.includes(name))
-   //     setProjects(new_array)
-   //     setActive(name)
-   // }
+   const handleFilterCategory = (category: string) => {
+      if (category === 'All') {
+         setProjects(data_projects)
+         return
+      }
+      const new_array = data_projects.filter(project =>
+         project.category.includes(category)
+      )
+      setProjects(new_array)
+      setActive(category)
+   }
 
    const project_variants = {
       hidden: {
@@ -34,14 +40,55 @@ const Projects = () => {
    }
 
    return (
-      <div
-         className='p-4'
-         // variants={project_variants}
-         // initial="hidden"
-         // animate="visible"
-         // exit="exit"
-      >
-         <div className='grid'>
+      <div className='px-5 py-2 overflow-y-scroll' style={{ height: '70vh' }}>
+         {/* Projects Navbar */}
+         <nav className='flex px-3 py-2 space-x-3 overflow-x-auto list-none bg-gray-200 rounded-lg dark:bg-gray-900'>
+            {/* //use className */}
+            <li
+               className={`cursor-pointer hover:text-green `}
+               onClick={() => handleFilterCategory('All')}>
+               All
+            </li>
+            <li
+               className='cursor-pointer hover:text-green'
+               // use typescript to send value
+               onClick={() => handleFilterCategory('react')}>
+               React
+            </li>
+
+            <li
+               className='cursor-pointer hover:text-green'
+               onClick={() => handleFilterCategory('mongo')}>
+               Mongo
+            </li>
+            <li
+               className='cursor-pointer hover:text-green'
+               onClick={() => handleFilterCategory('express')}>
+               Express{' '}
+            </li>
+
+            <li
+               className='cursor-pointer hover:text-green'
+               onClick={() => handleFilterCategory('django')}>
+               Django
+            </li>
+            <li
+               className='cursor-pointer hover:text-green'
+               onClick={() => handleFilterCategory('express')}>
+               Express{' '}
+            </li>
+
+            <li
+               className='cursor-pointer hover:text-green'
+               onClick={() => handleFilterCategory('django')}>
+               Django
+            </li>
+         </nav>
+
+         <div className='grid grid-cols-12 gap-4 my-3 '>
+            {projects.map(project => (
+               <ProjectCard key={project.name} project={project} />
+            ))}
             {projects.map(project => (
                <ProjectCard key={project.name} project={project} />
             ))}
