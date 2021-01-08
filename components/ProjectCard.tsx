@@ -3,12 +3,13 @@ import { project } from '../types'
 import Image from 'next/image'
 import { AiFillGithub } from 'react-icons/ai'
 // TODO Github
+import { motion } from 'framer-motion'
 
 const ProjectCard: FunctionComponent<{ project: project }> = ({
    project: { name, image_path, deployed_url, github_url },
 }) => {
    return (
-      <div className='col-span-12 p-2 bg-gray-200 rounded-lg  cursor-pointer dark:bg-gray-800 sm:col-span-6 lg:col-span-4'>
+      <motion.div>
          {/* <a href={deployed_url} target='_blank' rel='noopener noreferrer'> */}
 
          <Image
@@ -21,13 +22,13 @@ const ProjectCard: FunctionComponent<{ project: project }> = ({
 
          {/* </a> */}
 
-         <div className='flex items-center justify-center my-2 text-lg'>
+         <div className='flex items-center justify-center my-2 text-base'>
             <a href={github_url} target='_blank' rel='noopener noreferrer'>
                <AiFillGithub className='w-8 h-8 mr-3' />
             </a>
             {name}
          </div>
-      </div>
+      </motion.div>
    )
 }
 

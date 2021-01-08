@@ -2,6 +2,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai'
 import { GiTie } from 'react-icons/gi'
 import { GoLocation } from 'react-icons/go'
 import { useTheme } from 'next-themes'
+
 export default function Sidebar() {
    const { theme, setTheme } = useTheme()
 
@@ -16,7 +17,7 @@ export default function Sidebar() {
             alt='avatar'
             className='w-32 h-32 mx-auto border rounded-full'
          />
-         <h3 className='my-4 text-3xl font-bold tracking-wide font-kaushan'>
+         <h3 className='my-4 text-3xl font-semibold tracking-wider font-kaushan'>
             <span className='text-green '>Sumit</span> Dey
          </h3>
          <p className='px-2 py-1 my-3 font-medium bg-gray-200 rounded-full dark:bg-gray-900'>

@@ -2,6 +2,7 @@ import { project } from './../types'
 
 const data_projects: project[] = [
    {
+      id: 0,
       name: 'COVID 19 tracker',
       image_path: '/images/covid.jpg',
       deployed_url: 'https://covid-19-tracker-by-sumit.web.app/',
@@ -10,6 +11,7 @@ const data_projects: project[] = [
    },
 
    {
+      id: 1,
       name: 'Dev Talks',
       image_path: '/images/dev.jpg',
       deployed_url: 'https://dev-talks.herokuapp.com/',
@@ -18,6 +20,7 @@ const data_projects: project[] = [
    },
 
    {
+      id: 2,
       name: 'Realtime Chat App',
       image_path: '/images/chatapp.jpg',
       deployed_url: 'https://sumit-chat.netlify.app/',
@@ -27,6 +30,7 @@ const data_projects: project[] = [
    },
 
    {
+      id: 3,
       name: 'Tweeter Clone',
       image_path: '/images/tweetme.jpg',
       deployed_url: 'http://sumaxtweetme.pythonanywhere.com/',
@@ -34,6 +38,7 @@ const data_projects: project[] = [
       category: ['django', 'react'],
    },
    {
+      id: 4,
       name: 'Dev Portfolio',
       image_path: '/images/portfolio.jpg',
       deployed_url: 'http://suprateem.herokuapp.com/',
@@ -50,11 +55,12 @@ const data_projects: project[] = [
    //    },
 
    {
+      id: 5,
       name: 'Color Classification using tf.js',
       image_path: '/images/color.jpg',
       deployed_url: '!#',
       github_url: 'https://github.com/Dey-Sumit/color-classification',
-      category: ['node', 'ml'],
+      category: ['express', 'ml'],
    },
 
    //    {

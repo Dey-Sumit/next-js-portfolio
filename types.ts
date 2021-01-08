@@ -5,6 +5,7 @@ export interface skill {
 }
 
 export interface project {
+   id: number
    name: string
    image_path: any
    deployed_url: string

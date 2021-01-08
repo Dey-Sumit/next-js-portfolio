@@ -14,17 +14,18 @@ const about_data: expertise[] = [
    {
       Icon: FaServer,
       title: 'Backend  Development',
-      about: 'handle database, server, api using and SQLlite',
+      about:
+         'handle database, server, api using Express & other popular frameworks',
    },
    {
       Icon: AiOutlineApi,
       title: 'API Development',
-      about: 'I can develop robust REST API using django-rest-api ',
+      about: 'I can develop robust REST API using django-rest-api & Node API',
    },
    {
       Icon: MdDeveloperMode,
       title: 'Competitive Coder',
-      about: 'a daily problem solver in HackerRank and Leetcode',
+      about: 'a daily problem solver in HackerRank and Leetcode,HackerRank',
    },
    {
       Icon: AiOutlineAntDesign,
