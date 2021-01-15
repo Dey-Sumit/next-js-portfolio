@@ -2,6 +2,7 @@ import Bar from '../components/Bar'
 import { languages, tools } from '../data/resume'
 import { motion } from 'framer-motion'
 import { fadeInUp } from '../animations'
+import Head from 'next/head'
 export default function About() {
    const variants = {
       hidden: {
@@ -30,6 +31,9 @@ export default function About() {
          initial='initial'
          animate='animate'
          exit='exit'>
+         <Head>
+            <title>Sumit Dey | Web Developer | Resume</title>
+         </Head>
          <motion.div className='grid gap-6 md:grid-cols-2'>
             <motion.div variants={fadeInUp} animate='animate' initial='initial'>
                <h5 className='my-3 text-2xl font-bold'>Education</h5>

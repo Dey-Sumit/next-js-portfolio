@@ -16,6 +16,11 @@ body {
 ::-webkit-scrollbar-thumb {
    background-image: linear-gradient(to right bottom, #00f260, #0575e6);
 }
+
+.box_shadow_custom {
+   box-shadow: 2px 3px 8px 0px #353131;
+}
+
 @layer utilities {
    .scrollbar-hide {
       ::-webkit-scrollbar {

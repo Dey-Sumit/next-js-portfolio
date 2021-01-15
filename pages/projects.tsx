@@ -5,6 +5,7 @@ import ProjectCard from '../components/ProjectCard'
 import data_projects from '../data/projects'
 import { pageAnimation, fadeInUp, stagger } from '../animations'
 import { log } from 'console'
+import Head from 'next/head'
 
 const Projects = () => {
    const [projects, setProjects] = useState(data_projects)
@@ -37,6 +38,9 @@ const Projects = () => {
          animate='visible'
          initial='hidden'
          exit='exit'>
+         <Head>
+            <title>Sumit Dey | Web Developer | Projects</title>
+         </Head>
          {/* Projects Navbar */}
          <nav className='flex px-3 py-2 space-x-3 overflow-x-auto list-none bg-gray-200 rounded-lg dark:bg-gray-900'>
             {/* //use className */}

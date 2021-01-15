@@ -1,3 +1,9 @@
+// Pages in Next.js skip the definition of the surrounding document's markup. For example, you never include <html>, <body>, etc.
+// To override that default behavior, you must create a file at ./pages/_document.js, where you can extend the Document class.
+
+// Note: _document.js is only rendered on the server side and not on the client side.
+// so event handlers like onClick is not going to work.
+
 import Document, {
    Html,
    Head,
