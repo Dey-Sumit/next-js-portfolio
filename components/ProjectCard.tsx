@@ -1,11 +1,11 @@
 import { FunctionComponent } from 'react'
-import { project } from '../types'
+import { Project } from '../types'
 import Image from 'next/image'
 import { AiFillGithub } from 'react-icons/ai'
 // TODO Github
 import { motion } from 'framer-motion'
 
-const ProjectCard: FunctionComponent<{ project: project }> = ({
+const ProjectCard: FunctionComponent<{ project: Project }> = ({
    project: { name, image_path, deployed_url, github_url },
 }) => {
    return (

@@ -1,8 +1,8 @@
 import Bar from '../components/Bar'
-import { languages, tools } from '../data/resume'
 import { motion } from 'framer-motion'
 import { fadeInUp } from '../animations'
 import Head from 'next/head'
+import { languages, tools } from '../data'
 export default function About() {
    const variants = {
       hidden: {
@@ -38,7 +38,7 @@ export default function About() {
             <motion.div variants={fadeInUp} animate='animate' initial='initial'>
                <h5 className='my-3 text-2xl font-bold'>Education</h5>
                <div className=''>
-                  <h5 className='my-2 text-2xl font-bold'>
+                  <h5 className='my-2 text-xl font-bold'>
                      Computer Science Engineering
                   </h5>
                   <p className='font-semibold'>
@@ -53,7 +53,7 @@ export default function About() {
             <motion.div variants={fadeInUp} animate='animate' initial='initial'>
                <h5 className='my-3 text-2xl font-bold'>Experience</h5>
                <div className=''>
-                  <h5 className='my-2 text-2xl font-bold'>Internship</h5>
+                  <h5 className='my-2 text-xl font-bold'>Internship</h5>
                   <p className='font-semibold'>Tata Consultancy Services</p>
                   <p className='my-3'>
                      Test suitability of an website for blind and color-blind

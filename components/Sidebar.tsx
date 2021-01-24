@@ -43,8 +43,8 @@ export default function Sidebar() {
                <AiFillGithub className='w-8 h-8 cursor-pointer' />{' '}
             </a>
          </div>
-         {/* Contacts */}
 
+         {/* Contacts */}
          <div
             className='py-4 my-5 bg-gray-200 dark:bg-gray-900'
             style={{ marginLeft: '-1rem', marginRight: '-1rem' }}>
@@ -52,25 +52,27 @@ export default function Sidebar() {
                <GoLocation className='mr-2' /> <span>Kolkata,India </span>
             </div>
             <p className='my-2 '> code.sumax@gmail.com </p>
-            <p className='my-2'> 8514961765 / 8640960375 </p>
+            <p className='my-2'> 8514961665 / 8640960375 </p>
          </div>
 
          {/* Email Button */}
          {/* //TODO FIX on hover scale is not working */}
          <button
-            className='w-8/12 px-5 py-2 text-white rounded-full cursor-pointer hover:scale-105 '
+            className='w-8/12 px-5 py-2 text-white rounded-full cursor-pointer hover:scale-105 focus:outline-none'
             style={{
                backgroundImage: 'linear-gradient(90deg,#00f260,#0575e6)',
-            }}>
+            }}
+            onClick={() => window.open('mailto:code.sumax@gmail.com')}>
             Email me
          </button>
          <button
             onClick={() => changeMode()}
-            className='w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer hover:scale-105 '
+            className='w-8/12 px-5 py-2 my-4 text-white rounded-full cursor-pointer focus:outline-none hover:scale-105 '
             style={{
                backgroundImage: 'linear-gradient(90deg,#00f260,#0575e6)',
             }}>
-            Mode
+            {/* //TODO something better */}
+            Change Mode
          </button>
       </div>
    )

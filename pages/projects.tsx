@@ -1,30 +1,25 @@
 import React, { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import ProjectCard from '../components/ProjectCard'
-import data_projects from '../data/projects'
+import { projects as projectsData } from '../data'
 import { pageAnimation, fadeInUp, stagger } from '../animations'
-import { log } from 'console'
 import Head from 'next/head'
-
+import { Category } from '../types'
 const Projects = () => {
-   const [projects, setProjects] = useState(data_projects)
+   const [projects, setProjects] = useState(projectsData)
    const [active, setActive] = useState('All')
 
-   //TODO use active
-
-   const handleFilterCategory = (category: string) => {
+   const handleFilterCategory = (category: Category | 'All') => {
       if (category === 'All') {
-         setProjects(data_projects)
+         setProjects(projectsData)
          setActive(category)
          return
       }
-      console.log(projects)
 
-      const new_array = data_projects.filter(project =>
+      const new_array = projectsData.filter(project =>
          project.category.includes(category)
       )
-      console.log(new_array)
 
       setProjects(new_array)
       setActive(category)
