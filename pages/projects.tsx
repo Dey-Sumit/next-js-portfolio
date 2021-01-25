@@ -27,7 +27,7 @@ const Projects = () => {
 
    return (
       <motion.div
-         className='px-5 py-2 overflow-y-scroll'
+         className='px-5 py-2 overflow-y-scroll '
          style={{ height: '70vh' }}
          variants={pageAnimation}
          animate='visible'
@@ -80,7 +80,7 @@ const Projects = () => {
          </nav>
 
          <motion.div
-            className='grid grid-cols-12 gap-4 my-3 '
+            className='relative grid grid-cols-12 gap-4 my-3'
             variants={stagger}
             initial='initial'
             animate='animate'>
@@ -88,14 +88,8 @@ const Projects = () => {
             {projects.map(project => (
                <motion.div
                   variants={fadeInUp}
-                  // exit={{
-                  //    opacity: 0,
-                  //    transition: {
-                  //       delay: 0.3,
-                  //    },
-                  // }}
                   key={project.id}
-                  className='col-span-12 p-2 bg-gray-200 rounded-lg cursor-pointer dark:bg-gray-900 sm:col-span-6 lg:col-span-4'>
+                  className='col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-gray-900 sm:col-span-6 lg:col-span-4'>
                   <ProjectCard project={project} key={project.id} />
                </motion.div>
             ))}

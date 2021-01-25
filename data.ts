@@ -155,6 +155,22 @@ const projects: Project[] = [
       github_url: 'https://github.com/Dey-Sumit/color-classification',
       category: ['express', 'ml'],
    },
+   {
+      id: 6,
+      name: 'Color Classification using tf.js',
+      image_path: '/images/color.jpg',
+      deployed_url: '!#',
+      github_url: 'https://github.com/Dey-Sumit/color-classification',
+      category: ['express', 'ml'],
+   },
+   {
+      id: 7,
+      name: 'Color Classification using tf.js',
+      image_path: '/images/color.jpg',
+      deployed_url: '!#',
+      github_url: 'https://github.com/Dey-Sumit/color-classification',
+      category: ['express', 'ml'],
+   },
 ]
 
 export { tools, languages, services, projects }

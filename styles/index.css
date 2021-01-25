@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-   background-image: linear-gradient(to right bottom, #00f260, #0575e6);
+   /* background-image: linear-gradient(to right bottom, #00f260, #0575e6); */
    background-attachment: fixed;
    font-family: sans-serif;
    color: #354358;
@@ -20,6 +20,11 @@ body {
 /* //TODO do better shadow :( */
 .box_shadow_custom {
    box-shadow: 2px 3px 8px 0px #353131;
+}
+
+.backdrop {
+   backdrop-filter: blur(10px);
+   /* background-color: rgba(1, 1, 1, 0.8); */
 }
 
 @layer utilities {

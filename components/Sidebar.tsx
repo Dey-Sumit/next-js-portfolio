@@ -11,7 +11,7 @@ export default function Sidebar() {
    }
 
    return (
-      <div className='h-full p-4 font-sans text-base text-center bg-white rounded-2xl dark:bg-black dark:text-white '>
+      <div className='h-full p-4 font-sans text-base text-center bg-white rounded-2xl dark:bg-black2 dark:text-white '>
          <img
             src='https://sumitdey.netlify.app/static/media/max.9d3a6d3e.jpg'
             alt='avatar'
