@@ -21,6 +21,8 @@ export interface Project {
    deployed_url: string
    github_url: string
    category: Category[]
+   description: string
+   key_points: string[]
 }
 
 export interface Service {

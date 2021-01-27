@@ -8,7 +8,7 @@ const Bar: FunctionComponent<{ value: Skill }> = ({
 }) => {
    const bar_width = `${level}%`
    return (
-      <div className='my-2 text-white bg-gray-300 rounded-full dark:bg-gray-800'>
+      <div className='my-2 text-white bg-gray-300 rounded-full dark:bg-black-500'>
          <motion.div
             className='flex items-center px-4 py-1 rounded-full'
             style={{

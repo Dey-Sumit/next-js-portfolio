@@ -24,7 +24,7 @@ const About = () => {
             teach Full Stack Web Development Projects
          </h6>
          <div
-            className='flex-grow p-4 mt-5 bg-gray-400 dark:bg-gray-800'
+            className='flex-grow p-4 mt-5 bg-gray-400 dark:bg-black-100'
             style={{ marginLeft: '-1.5rem', marginRight: '-1.5rem' }}>
             <h4 className='my-3 text-xl font-semibold tracking-wide'>
                What I am doing
@@ -39,7 +39,7 @@ const About = () => {
                {services.map(service => (
                   <motion.div
                      variants={fadeInUp}
-                     className='col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-gray-900 lg:col-span-1 '
+                     className='col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-500 lg:col-span-1 '
                      key={service.title}>
                      <ServiceCard service={service} />
                   </motion.div>

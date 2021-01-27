@@ -19,7 +19,14 @@ const animation = {
 }
 
 const ProjectCard: FunctionComponent<{ project: Project }> = ({
-   project: { name, image_path, deployed_url, github_url },
+   project: {
+      name,
+      image_path,
+      deployed_url,
+      github_url,
+      description,
+      key_points,
+   },
 }) => {
    const [showDetail, setShowDetail] = useState(false)
 
@@ -39,7 +46,7 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
          <AnimatePresence>
             {showDetail && (
                <motion.div
-                  className='absolute top-0 left-0 z-10 grid w-full h-auto p-10 bg-black rounded-lg md:grid-cols-2 gap-x-12 backdrop bg-opacity-80'
+                  className='absolute top-0 left-0 z-10 grid w-full h-auto p-10 text-black bg-gray-100 rounded-lg dark:bg-black-100 dark:text-gray-100 md:grid-cols-2 gap-x-12 '
                   variants={animation}
                   animate='visible'
                   initial='hidden'
@@ -70,12 +77,12 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
                         variants={fadeInUp}>
                         <a
                            href={github_url}
-                           className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-lg '>
+                           className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500 '>
                            <AiFillGithub /> <span>Github</span>
                         </a>
                         <a
                            href={deployed_url}
-                           className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-800 rounded-lg'>
+                           className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500'>
                            <AiFillProject /> <span>Project</span>
                         </a>
                      </motion.div>
@@ -92,27 +99,19 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
                      <motion.h3
                         className='my-3 text-base font-medium'
                         variants={fadeInUp}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Unde sunt minus et. <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Unde sunt minus et.
+                        {description}
                      </motion.h3>
 
                      <motion.div
                         className='flex flex-wrap mt-5 space-x-2'
                         variants={fadeInUp}>
-                        <span className='p-1 bg-gray-700 rounded-lg'>
-                           React
-                        </span>
-                        <span className='p-1 bg-gray-700 rounded-lg'>
-                           Redux
-                        </span>
-                        <span className='p-1 bg-gray-700 rounded-lg'>
-                           Django
-                        </span>
-                        <span className='p-1 bg-gray-700 rounded-lg'>API</span>
-                        <span className='p-1 bg-gray-700 rounded-lg'>API</span>
-                        <span className='p-1 bg-gray-700 rounded-lg'>API</span>
+                        {key_points.map((value, i) => (
+                           <span
+                              key={i}
+                              className='p-1 px-2 bg-gray-300 rounded-sm dark:bg-black-500'>
+                              {value}
+                           </span>
+                        ))}
                      </motion.div>
                   </motion.div>
 

@@ -28,7 +28,7 @@ const Projects = () => {
    return (
       <motion.div
          className='px-5 py-2 overflow-y-scroll '
-         style={{ height: '70vh' }}
+         style={{ height: '65vh' }}
          variants={pageAnimation}
          animate='visible'
          initial='hidden'
@@ -37,7 +37,7 @@ const Projects = () => {
             <title>Sumit Dey | Web Developer | Projects</title>
          </Head>
          {/* Projects Navbar */}
-         <nav className='flex px-3 py-2 space-x-3 overflow-x-auto list-none bg-gray-200 rounded-lg dark:bg-gray-900'>
+         <nav className='flex px-3 py-2 space-x-3 overflow-x-auto list-none'>
             {/* //use className */}
             <li
                className={`cursor-pointer hover:text-green ${
@@ -89,7 +89,7 @@ const Projects = () => {
                <motion.div
                   variants={fadeInUp}
                   key={project.id}
-                  className='col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-gray-900 sm:col-span-6 lg:col-span-4'>
+                  className='col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-black-500 sm:col-span-6 lg:col-span-4'>
                   <ProjectCard project={project} key={project.id} />
                </motion.div>
             ))}
