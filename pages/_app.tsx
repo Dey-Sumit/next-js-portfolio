@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, router }) {
                name='keywords'
                content='Full Stack Web Developer, Freelancer ,MERN developer'
             />
-            <meta name='robots' content='index,follow' />
+            {/* <meta name='robots' content='index,follow' /> */}
          </Head>
          {/* //TODO add better box shadow */}
          <div className='grid grid-cols-12 gap-6 px-5 font-serif my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-36 xl:px-48 '>
