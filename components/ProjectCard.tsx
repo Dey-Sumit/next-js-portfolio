@@ -46,7 +46,7 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
          <AnimatePresence>
             {showDetail && (
                <motion.div
-                  className='absolute top-0 left-0 z-10 grid w-full h-auto p-10 text-black bg-gray-100 rounded-lg dark:bg-black-100 dark:text-gray-100 md:grid-cols-2 gap-x-12 '
+                  className='absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 dark:bg-black-100 dark:text-gray-100 md:grid-cols-2 gap-x-12 '
                   variants={animation}
                   animate='visible'
                   initial='hidden'
@@ -92,7 +92,7 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
                      initial='initial'
                      animate='animate'>
                      <motion.h2
-                        className='mb-3 text-2xl font-medium '
+                        className='mb-3 text-xl font-medium md:text-2xl '
                         variants={fadeInUp}>
                         {name}
                      </motion.h2>
@@ -103,12 +103,12 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
                      </motion.h3>
 
                      <motion.div
-                        className='flex flex-wrap mt-5 space-x-2'
+                        className='flex flex-wrap mt-5 space-x-2 text-sm tracking-wider'
                         variants={fadeInUp}>
                         {key_points.map((value, i) => (
                            <span
                               key={i}
-                              className='p-1 px-2 bg-gray-300 rounded-sm dark:bg-black-500'>
+                              className='p-1 px-2 my-1 bg-gray-300 rounded-sm dark:bg-black-500'>
                               {value}
                            </span>
                         ))}
@@ -116,7 +116,7 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
                   </motion.div>
 
                   <button
-                     className='absolute top-3 right-3 focus:outline-none'
+                     className='absolute p-1 rounded-full top-3 right-3 focus:outline-none bg-black-300'
                      onClick={() => setShowDetail(false)}>
                      <MdClose size={30} />
                   </button>

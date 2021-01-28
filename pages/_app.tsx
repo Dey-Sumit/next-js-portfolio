@@ -20,6 +20,21 @@ function MyApp({ Component, pageProps, router }) {
                name='keywords'
                content='Full Stack Web Developer, Freelancer ,MERN developer'
             />
+            <meta
+               name='viewport'
+               content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'
+            />
+            <meta name='description' content='Description' />
+            <meta name='keywords' content='Keywords' />
+            <link rel='manifest' href='/manifest.json' />
+            <link
+               href='/Netflix.png'
+               rel='icon'
+               type='image/png'
+               sizes='16x16'
+            />
+            <link rel='apple-touch-icon' href='/Netflix.png'></link>
+            <meta name='theme-color' content='#317EFB' />
             {/* <meta name='robots' content='index,follow' /> */}
          </Head>
          {/* //TODO add better box shadow */}
