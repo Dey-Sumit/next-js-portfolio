@@ -29,7 +29,7 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
    },
 }) => {
    const [showDetail, setShowDetail] = useState(false)
-
+   // TODO scroll to top
    return (
       <motion.div>
          <Image
