@@ -127,7 +127,7 @@ const projects: Project[] = [
    },
  {
       id: 13,
-      name: 'Twitter Clone ',
+      name: 'Twitter Clone (Next js) ',
       //TODO add data
       image_path: '/images/twitter.png',
       deployed_url: 'https://twittter.vercel.app/',
@@ -172,7 +172,7 @@ const projects: Project[] = [
 
    {
       id: 3,
-      name: 'Tweeter Clone',
+      name: 'Social Media (Django & React)',
       image_path: '/images/tweetme.jpg',
       deployed_url: 'http://sumaxtweetme.pythonanywhere.com/',
       github_url: 'https://github.com/Dey-Sumit/tweetme',
