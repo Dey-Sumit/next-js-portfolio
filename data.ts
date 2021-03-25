@@ -171,17 +171,6 @@ const projects: Project[] = [
    },
 
    {
-      id: 3,
-      name: 'Social Media (Django & React)',
-      image_path: '/images/tweetme.jpg',
-      deployed_url: 'http://sumaxtweetme.pythonanywhere.com/',
-      github_url: 'https://github.com/Dey-Sumit/tweetme',
-      category: ['django', 'react'],
-      description:
-         'First Django Project :) | Typical Social Media App where one can post,like ,comment etc',
-      key_points: ['React', 'Django', 'Django REST API'],
-   },
-   {
       id: 4,
       name: 'Dev Portfolio',
       image_path: '/images/portfolio.jpg',
@@ -239,6 +228,18 @@ const projects: Project[] = [
          'Sass',
          'Bootstrap',
       ],
+   },
+   
+   {
+      id: 3,
+      name: 'Social Media (Django & React)',
+      image_path: '/images/tweetme.jpg',
+      deployed_url: 'http://sumaxtweetme.pythonanywhere.com/',
+      github_url: 'https://github.com/Dey-Sumit/tweetme',
+      category: ['django', 'react'],
+      description:
+         'First Django Project :) | Typical Social Media App where one can post,like ,comment etc',
+      key_points: ['React', 'Django', 'Django REST API'],
    },
 ]
 
