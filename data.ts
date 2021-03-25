@@ -125,7 +125,18 @@ const projects: Project[] = [
          'An web app which shows how an algorithm (path finding or sorting) works with cool animation',
       key_points: ['React', 'firebase', 'Framer Motion'],
    },
-
+ {
+      id: 13,
+      name: 'Twitter Clone ',
+      //TODO add data
+      image_path: '/images/twitter.png',
+      deployed_url: 'https://twittter.vercel.app/',
+      github_url: 'https://github.com/Dey-Sumit/Next-js-Soical-Media',
+      category: ['react','express'],
+      description:
+         'Fully functional twitter like social media app',
+      key_points: ['React', 'next', 'api','auth','passport'],
+   },
    {
       id: 1,
       name: 'Dev Talks',
